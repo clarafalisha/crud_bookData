@@ -1,10 +1,17 @@
 "use client"
 import Link from "next/link"
-import { IoAddSharp, IoPencil, IoTrash } from "react-icons/io5"
+import { IoAddSharp, IoPencil, IoTrash, IoArrowForwardCircleSharp } from "react-icons/io5"
 import { useFormStatus } from "react-dom";
 import clsx from "clsx";
 import { deleteBook } from "@/lib/actions";
 
+export const BookButton = () =>{
+    return (
+        <Link href="/books" className="inline-flex items-center space-x-1 text-center text-white bg-blue-700 hover:bg-blue-800 px-5 py-[9px] rounded-sm text-sm">
+        <IoArrowForwardCircleSharp size={20} /> Books Table
+        </Link>
+    );
+};
 export const CreateButton = () =>{
     return (
         <Link href="/books/create" className="inline-flex items-center space-x-1 text-white bg-blue-700 hover:bg-blue-800 px-5 py-[9px] rounded-sm text-sm">
